@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GeoTagApp</title>
+		<link rel='stylesheet' href='./stylesheets/style.css'/>
+	</head>
+	<body>
+		<header class="col-12 row">
+			<img src="./images/location.png" width="100" height="100" alt="an image of a map and location">
+			<h1>GeoTagApp</h1>
+			<nav class="col-12">
+				<a href="#">About</a> | <a href="#">Help</a> | <a href="/">Home</a>
+			</nav>
+		</header>
+		<div class="row">
+			<div id="tagging" class="col-3">
+				<h2>Tagging</h2>
+				<form id="tag-form" action="/tagging" method="post">
+					<fieldset>
+						<legend>Enter new Geo Tag</legend>
+
+						<label for="latitude">Latitude</label>
+						<input id="taggingLatitude" name="latitude" placeholder="1.23" type="text" required>
+
+						<label for="longitude">Longitude</label>
+						<input id="taggingLongitude" name="longitude" placeholder="3.123123" type="text" required>
+
+						<label for="name">Name</label>
+						<input id="name" name="name" placeholder="Gebäude A" type="text" required maxlength="10" pattern="[A-Za-z]{1,10}$">
+
+						<label for="hashtag">Hashtag</label>
+						<input id="hashtag" name="hashtag" placeholder="#Hashtag" type="text" maxlength="11" pattern="[#][A-Za-z]{1,10}$">
+
+					    <input type="submit" value="Submit" submit>
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="discovery" class="col-9">
+				<h2>Discovery</h2>
+				<form id="filter-form" action="/discovery" method="post">
+					<fieldset>
+						<legend>Filter by SearchTerm</legend>
+						<input id="searchTerm" name="searchTerm" placeholder="search term">
+
+						<input id="discoveryLatitude" type="hidden" name="latitude">
+						<input id="discoveryLongitude" type="hidden" name="longitude">
+
+						<input type="submit" value="Apply">
+						<input type="reset" value="Remove">
+					</fieldset>
+				</form>
+				<div class="row">
+					<div id="taglist" class="col-4">
+						<ul id="results">
+							<li id="tag">Castle (49.01379, 8.404435) #sight</li>
+							<li id="tag">IWI (49.01379, 8.390071) #edu</li>
+						</ul>
+					</div>
+					<div id="tagmap" class="col-8">
+						<img id="result-img" src="./images/mapview.jpg" alt="a map with locations"/>
+						<div class="caption">Result map</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="col-12">
+			2017 by LKIT
+		</footer>
+		<!-- Load JavaScripts
+	  ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="./javascripts/geotagging.js"></script>
+	</body>
+</html>

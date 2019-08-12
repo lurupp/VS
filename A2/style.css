@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    padding: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+	.row {
+		flex-direction: column;
+	}
+}
+
+.row {
+	display: flex;
+}
+
+body {
+	padding: 25px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+header, footer {
+  background-color: #BCF;
+  color: #FFF;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px #ABF;
+}
+
+header img, h1 {
+	float: left;
+}
+
+header nav {
+	font-size: 18px;
+}
+
+#tagging input, label {
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+#tagging input {
+	padding: 5px;
+}
+
+fieldset {
+	border: 1px solid #BBB;
+	border-radius: 5px;
+}
+
+#taglist {
+	padding: 5px;
+}
+
+#taglist ul {
+	list-style: none;
+	padding: 0px;
+}
+
+#taglist li {
+	padding: 10px;
+	width: 100%;
+	color: #FFF;
+	font-size: 18px;
+	margin-bottom: 5px;
+	background-color: #BCF;
+}
+
+#taglist li:hover {
+	background-color: #DDF;
+}
+
+#tagmap {
+  padding: 20px;
+}
+
+#tagmap img {
+	max-width: 100%;
+}

@@ -1,0 +1,94 @@
+header {
+  background-color: #888;
+  color: white;
+  padding: 15px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+  padding: 50px;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+footer {
+  background-color: #888;
+  color: white;
+  padding: 15px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.tagging {
+  width: 20%;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  flex-direction: column;
+
+}
+
+.discovery {
+  width: 70%;
+  margin-bottom: 15px;
+  margin-right: : 15px;
+  flex-direction: column;
+
+}
+.insideDiscovery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.taglist {
+  width: 20%;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: default;
+  margin-right: 30px;
+
+
+}
+
+.tagmap {
+  width: 60%;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+#longitude {
+  widht: 90%;
+  margin-bottom: 10px;
+}
+#latitude {
+  widht: 90%;
+  margin-bottom: 10px;
+}
+#name {
+  widht: 90%;
+  margin-bottom: 10px;
+}
+#searchTerm {
+  widht: 90%;
+  margin-bottom: 10px;
+}
+.taglist li {
+  margin-bottom: 10px;
+  background-color: #888;
+  padding: 15px;
+}
+.taglist ul{
+  list-style-type: none;
+}
